@@ -71,11 +71,11 @@ public class NumberGame {
 	
 	public static int calculateWin(int[] numbers) {
         if (numbers[0] == 7 && numbers[1] == 7 && numbers[2] == 7) {
-            return 10; 
-        } else if (numbers[0] == 7 || numbers[1] == 7 || numbers[2] == 7) {
-            return 3; 
+            return 10; // If all the numbers are 7 then player win 10 Euro
         } else if ((numbers[0] == 7 && numbers[1] == 7) || (numbers[0] == 7 && numbers[2] == 7) || (numbers[1] == 7 && numbers[2] == 7)) {
-            return 5; 
+            return 5; // If at least one 2 number is 7 then player win 5 Euro
+        } else if (numbers[0] == 7 || numbers[1] == 7 || numbers[2] == 7) {
+            return 3; // If at least one number is 7 then player win 3 Euro
         } else {
             return 0; 
         }
