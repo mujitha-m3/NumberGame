@@ -42,24 +42,28 @@ public class NumberGame {
 
 	}
 	
+	// Get the input from user about how much they going to spend 
 	public static int getPlayerMoney(Scanner scanner) {
         System.out.print("Enter the amount of money you going to spend with lucky 7: ");
         int amountOfMoney = scanner.nextInt();
         return amountOfMoney;
     }
 	
+	// Genarate Random Numbers between 1 to 10
 	public static int[] generateRandomNumbers(Random random) {
         int[] numbers = new int[3];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) { // This for is for only genarate 3 numbers and assign the random 3 values to our array
             numbers[i] = random.nextInt(10) + 1; 
         }
         return numbers;
     }
 	
+	// display the randomly generated numbers into prompt 
 	public static void displayRandomNumbers(int[] numbers) {
         System.out.println("Random Numbers: " + numbers[0] + " " + numbers[1] + " " + numbers[2]);
     }
 
+	// Check if number 7 is included or not in the generated numbers array
 	public static boolean isContainsSeven(int[] numbers) {
         for (int number : numbers) {
             if (number == 7) {
